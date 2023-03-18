@@ -17,17 +17,20 @@ any(is.na(myData))
 # calculer la distribution de probabilité P (f ) pour chaque variable
 # P (f ) = nombre d’occurrences de la valeur f dans la variable / nombre total d’occurrences
 var_qualitatives <- c("Work_accident", "promotion_last_5years", "department", "salary")
+
 # Barplot pour les variables qualitatives et sauvegarder les graphiques
 for (i in var_qualitatives) {
   barplot(table(myData[,i]), main=i, xlab=i, ylab="Frequence", col="blue")
-  # dev.copy(png, file= paste0("plot_max/bar-", i, ".png"))
+  dev.copy(png, file= paste0("plot_max/bar-", i, ".png"))
+  dev.off() # Ajouter cette ligne pour fermer correctement le fichier png
 }
 
 var_quantitatives <- c("satisfaction_level", "last_evaluation", "number_project", "average_montly_hours", "time_spend_company")
 # Histogramme pour les variables quantitatives et sauvegarder les graphiques
 for (i in var_quantitatives) {
   hist(myData[,i], main=i, xlab=i, ylab="Frequence", col="blue")
-  # dev.copy(png, file= paste0("plot_max/hist-", i, ".png"))
+  dev.copy(png, file= paste0("plot_max/hist-", i, ".png"))
+  dev.off() # Ajouter cette ligne pour fermer correctement le fichier png
 }
 
 # Spécifiez les noms des attributs f pour lesquels vous voulez calculer la probabilité conditionnelle
