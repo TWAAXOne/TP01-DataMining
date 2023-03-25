@@ -1,5 +1,5 @@
 # Importer les données
-myData <- read.table(file="data/HR_prediction-train.csv", sep=",", header=T)
+myData <- read.table(file= "../data/HR_prediction-train.csv", sep=",", header=T)
 
 ################# Anaylser préliminaire
 # Combien y'a t'il d'instance

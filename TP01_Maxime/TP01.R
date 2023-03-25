@@ -1,6 +1,6 @@
 ### Analyse préliminaire des données
 ## Importer les données
-data <- read.csv("data/HR_prediction-train.csv")
+data <- read.csv("../data/HR_prediction-train.csv")
 
 
 ## Combien y'a t'il d'instance

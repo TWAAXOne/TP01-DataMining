@@ -29,4 +29,4 @@ runAnalysis <- function(datasetName, DiscreteAttributesIndeces, AttrsToRemoveInd
     }
 }
 
-runAnalysis("data/HR_prediction-train.csv", c(6, 7, 9, 10), 1, 8)
+runAnalysis("../data/HR_prediction-train.csv", c(6, 7, 9, 10), 1, 8)
