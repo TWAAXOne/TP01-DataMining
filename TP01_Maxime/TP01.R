@@ -1,6 +1,6 @@
 ### Analyse préliminaire des données
 ## Importer les données
-data <- read.csv("../data/HR_prediction-train.csv")
+data <- read.csv("./data/HR_prediction-train.csv", sep=",", header=TRUE)
 
 
 ## Combien y'a t'il d'instance
@@ -45,4 +45,16 @@ for (attr in qualitative_attributes) {
   # Affiche la probabilité conditionnelle P(y|f) pour chaque combinaison de valeurs de l'attribut qualitatif et de la variable cible
   cat("\nProbabilite conditionnelle P(", target_var, "|", attr, "):\n")
   print(conditional_prob)
+}
+
+### Pour chaque attribut quantitatif f :
+## Calculer la moyenne μ(f ) et la variance σ2 (f )
+# Attributs quantitatifs
+quantitative_attributes <- c("satisfaction_level", "last_evaluation", "number_project", "average_montly_hours", "time_spend_company")
+# Calcul de la moyenne et de la variance pour chaque attribut quantitatif
+for (attr in quantitative_attributes) {
+  mean <- mean(data[[attr]])
+  variance <- var(data[[attr]])
+  cat("\nMoyenne de", attr, ":", mean)
+  cat("\nVariance de", attr, ":", variance)
 }

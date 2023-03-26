@@ -50,3 +50,4 @@ for(f in f_attrs) {
   print(paste("Probabilité conditionnelle de la variable cible 'left' compte tenu des valeurs d'attribut", f, ":\\n"))
   print(prob_left_given_f)
 }
+
